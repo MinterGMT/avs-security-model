@@ -47,21 +47,21 @@ all_scenarios <- crossing(
 
 ---
 
-## Key Findings & Scenarios
+## Example Findings & Scenarios
 
 ### Scenario 1: Baseline - Impact of Slashing in a Slow Bear Market
 
 This scenario models a large-scale AVS during a "grinding" bear market with a slow, -0.5% daily price decay. It compares a low **10%** slashing penalty against a high **50%** penalty.
 
-![Scenario 1](scenario1.png)
+![Scenario 1](outputs/scenario1.png)
 
-**Insight:** The results are stark. With a 10% slashing penalty, the system is almost universally insecure from Day 1. In contrast, a 50% penalty provides a robust security surface, protecting the AVS against multi-billion dollar threats, especially at higher levels of restaked ETH. This demonstrates that the slashing penalty is a primary and highly effective lever for ensuring system security.
+**Insight:** With a 10% slashing penalty, the system is almost universally insecure from Day 1. In contrast, a 50% penalty provides a robust security surface, protecting the AVS against multi-billion dollar threats, especially at higher levels of restaked ETH. The slashing penalty is a primary and highly effective lever for ensuring system security.
 
 ### Scenario 2: Stress Test - Resilience During a Sharp Market Crash
 
 This scenario models the same AVS but under a much more aggressive market crash, simulated with a -2.0% daily price decay. It compares high slashing penalties of **50%** and **75%** to see how they hold up under extreme stress.
 
-![Scenario 2](scenario2.png)
+![Scenario 2](outputs/scenario2.png)
 
 **Insight:** Market velocity is a critical risk factor. Compared to the baseline, the security surface has significantly eroded. Scenarios that were previously secure for over 80-90 days now fail in 30-60 days. This highlights that economic security is not static; it is highly sensitive to the rate of collateral price decay. Even a very high 75% slashing penalty cannot fully insulate the system from rapid, systemic market risk.
 
@@ -69,7 +69,7 @@ This scenario models the same AVS but under a much more aggressive market crash,
 
 This scenario tests the security dynamics for a smaller, emerging AVS where the financial stakes are lower (threat models in the tens of millions). It compares a moderate **25%** slashing penalty against a **50%** penalty.
 
-![Scenario 3](scenario3.png)
+![Scenario 3](outputs/scenario3.png)
 
 **Insight:** The core principle holds true even at a smaller scale. Doubling the slashing penalty from 25% to 50% dramatically expands the secure design space for the AVS. Further tests (not pictured) confirmed that even tripling the validator yield incentives had no material impact on the outcome, as the slashing penalty remains the dominant factor in the attacker's economic calculation.
 
